@@ -1,6 +1,8 @@
 # plt.c
 
-C library for plotting in the terminal with [Unicode block elements](https://en.wikipedia.org/wiki/Unicode_block).
+![plt_hist example](doc/plt_hist-example.png)
+
+C library for plotting in the terminal with [unicode block elements](https://en.wikipedia.org/wiki/Unicode_block).
 
 *Currently only supports histograms.*
 
@@ -14,11 +16,8 @@ float data[COUNT];
 plt_hist(data, COUNT, ROWS, COLS);
 ```
 
-Output:
-![plt_hist example](doc/plt_hist-example.png)
+## Screencast
 
-## Programming screencast
-
-Walkthrough coding this up from scratch up to the initial commit of this repo.
+Walkthrough where I'm cooking this up from scratch:
 
 [![Histogram Plotting in C](https://img.youtube.com/vi/aLNlyBNU0tw/mqdefault.jpg)](https://youtu.be/aLNlyBNU0tw)
