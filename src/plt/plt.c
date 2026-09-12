@@ -21,15 +21,18 @@ void plt_hist(float *data, size_t len, size_t rows, size_t cols) {
 
   // Keep track of bucket counts
   size_t buckets[cols] = {};
-  size_t bucket_max = 0;
   for (size_t i = 0; i < len; ++i) {
     size_t bucket_ix = (data[i] - x_min) * x_scale;
     bucket_ix = bucket_ix > cols - 1 ? cols - 1 : bucket_ix;
 
     buckets[bucket_ix]++;
+  }
 
-    if (buckets[bucket_ix] > bucket_max) {
-      bucket_max = buckets[bucket_ix];
+  // Find the max count
+  size_t bucket_max = 0;
+  for (size_t i = 0; i < cols; ++i) {
+    if (buckets[i] > bucket_max) {
+      bucket_max = buckets[i];
     }
   }
 
