@@ -14,4 +14,4 @@ plt_hist(data, len, ROWS, COLS);
 
 Walkthrough coding this up from scratch up to the initial commit of this repo.
 
-[!(https://img.youtube.com/vi/aLNlyBNU0tw/0.jpg)](https://www.youtube.com/watch?v=aLNlyBNU0tw)
+[![Histogram Plotting in C](https://img.youtube.com/vi/aLNlyBNU0tw/mqdefault.jpg)](https://www.youtube.com/watch?v=aLNlyBNU0tw)
