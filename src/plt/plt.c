@@ -49,21 +49,21 @@ void plt_hist(float *data, size_t len, size_t rows, size_t cols) {
     "\u2588",
   };
   // clang-format on
-  size_t block_counts = sizeof(blocks) / sizeof(*blocks) - 1;
+  size_t block_count = sizeof(blocks) / sizeof(*blocks) - 1;
 
   // Scale heights
   for (size_t i = 0; i < cols; ++i) {
-    buckets[i] = (buckets[i] * rows * block_counts) / bucket_max;
+    buckets[i] = (buckets[i] * rows * block_count) / bucket_max;
   }
 
   // Plotting
   for (size_t i = 0; i < rows; ++i) {
-    size_t height = (rows - 1 - i) * block_counts;
+    size_t height = (rows - 1 - i) * block_count;
 
     for (size_t j = 0; j < cols; ++j) {
       int block_ix = buckets[j] - height;
       block_ix = block_ix < 0 ? 0 : block_ix;
-      block_ix = block_ix > (int)block_counts ? block_counts : block_ix;
+      block_ix = block_ix > (int)block_count ? block_count : block_ix;
 
       printf("%s", blocks[block_ix]);
     }
