@@ -16,13 +16,14 @@ void plt_hist(float *data, size_t len, size_t rows, size_t cols) {
       x_max = val;
     }
   }
-  float x_range_inv = 1.0f / (x_max - x_min);
+  float x_range = x_max - x_min;
+  float x_scale = x_range > 0.0f ? cols / x_range : 0.0f;
 
   // Keep track of bucket counts
   size_t buckets[cols] = {};
   size_t bucket_max = 0;
   for (size_t i = 0; i < len; ++i) {
-    size_t bucket_ix = (data[i] - x_min) * x_range_inv * cols;
+    size_t bucket_ix = (data[i] - x_min) * x_scale;
     bucket_ix = bucket_ix > cols - 1 ? cols - 1 : bucket_ix;
 
     buckets[bucket_ix]++;
