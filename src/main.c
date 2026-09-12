@@ -1,9 +1,8 @@
 #include "plt/plt.h"
-#include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
 
-#define SAMPLE_COUNT 1000000
+#define SAMPLE_COUNT 100000
 #define ROWS 12
 #define COLS 72
 
@@ -13,7 +12,7 @@ int main(void) {
     float roll_a = (float)random() / RAND_MAX;
     float roll_b = (float)random() / RAND_MAX;
 
-    data[i] = roll_a;
+    data[i] = roll_a + roll_b;
   }
   printf("\n");
 

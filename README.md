@@ -1,16 +1,37 @@
 # plt.c
 
-C library for plotting in the terminal.
+C library for plotting in the terminal with [Unicode block elements](https://en.wikipedia.org/wiki/Unicode_block).
 
-Allows for plotting histograms based on a float array.
+*Currently only supports histograms.*
 
 Example usage:
 
 ```c
-plt_hist(data, len, ROWS, COLS);
+float data[COUNT];
+
+...
+
+plt_hist(data, COUNT, ROWS, COLS);
 ```
 
-## Full build process
+Output:
+
+```console
+                                 ▃▅█▇▁
+                               ▃▆█████▇▅▂
+                            ▃▇███████████▇▄▆▁
+                         ▆▆▆█████████████████▅▄▁
+                     ▂▁█▇███████████████████████▂▁▁
+                  ▁ ▆██████████████████████████████▄▂▂
+                ▃▆█████████████████████████████████████▄▂
+            ▂▃▆▇█████████████████████████████████████████▆▂▁
+          ▅▆████████████████████████████████████████████████▆▄
+      ▁▃▆██████████████████████████████████████████████████████▆▃▁
+   ▂▄█████████████████████████████████████████████████████████████▇▃▂
+▁▃▇██████████████████████████████████████████████████████████████████▇▃▁
+```
+
+## Programming screencast
 
 Walkthrough coding this up from scratch up to the initial commit of this repo.
 
