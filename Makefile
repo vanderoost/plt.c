@@ -29,7 +29,7 @@ run: $(EXEC)
 	$<
 
 watch:
-	find $(SRC) -type f | entr -c make run
+	@find $(SRC) -type f | entr -c make run
 
 clean:
 	$(RM) -r $(BIN) $(OBJ)

@@ -2,8 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define SAMPLE_COUNT 100000
-#define ROWS 12
+#define SAMPLE_COUNT 20000
+#define ROWS 16
 #define COLS 72
 
 int main(void) {
@@ -14,7 +14,6 @@ int main(void) {
 
     data[i] = roll_a + roll_b;
   }
-  printf("\n");
 
   plt_hist(data, SAMPLE_COUNT, ROWS, COLS);
 
